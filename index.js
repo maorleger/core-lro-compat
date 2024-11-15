@@ -91,9 +91,9 @@ const getLro3Async = async () => {
 };
 
 async function main() {
-  const lr2 = await getLro2();
-  const lr3 = getLro3Sync();
-  const lr3async = await getLro3Async();
+  const lr2 = await getLro2(); // const lr2: lro2.SimplePollerLike<lro2.OperationState<any>, any>
+  const lr3 = getLro3Sync(); // const lr3: lro3.PollerLike<lro3.OperationState<any>, any>
+  const lr3async = await getLro3Async(); // const lr3async: any
 }
 
 main().catch(console.error);
